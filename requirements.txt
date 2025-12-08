@@ -3,3 +3,5 @@ requests
 tqdm
 scikit-learn
 networkx
+torch
+joblib

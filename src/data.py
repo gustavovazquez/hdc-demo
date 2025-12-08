@@ -11,6 +11,15 @@ class Graph:
         self.node_labels = node_labels if node_labels is not None else {}
         self.graph_label = graph_label
 
+    def number_of_nodes(self):
+        nodes = set()
+        for u, v in self.edges:
+            nodes.add(u)
+            nodes.add(v)
+        # Also include isolated nodes if they have labels
+        nodes.update(self.node_labels.keys())
+        return len(nodes)
+
 def load_tudataset(name="MUTAG", root="data"):
     """
     Downloads and loads a TUDataset.

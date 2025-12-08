@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# Data and Results
+data/
+papers/
+*.pdf
+results*.txt
+benchmark_results.txt
+centralities_results.txt
+full_results.txt
+
+# External Repos
+comparison_repo/
+
+# IDE
+.vscode/
+.idea/

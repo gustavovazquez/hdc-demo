@@ -96,7 +96,7 @@ class GraphHDTorch:
         
         # Run Parallel Job
         # n_jobs=-1 uses all available cores
-        results = Parallel(n_jobs=self.n_jobs, batch_size=32)(
+        results = Parallel(n_jobs=self.n_jobs)(
             delayed(process_single_graph)(
                 edges, 
                 self.centrality, 

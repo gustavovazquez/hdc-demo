@@ -1,4 +1,5 @@
 import time
+import os
 import torch
 import numpy as np
 import warnings
@@ -15,6 +16,7 @@ def run_experiment(dataset_name, metrics):
     print(f"Dataset: {dataset_name} | Device: {DEVICE}")
     if DEVICE.type == 'cuda':
         print(f"GPU: {torch.cuda.get_device_name(0)}")
+    print(f"CPUs available: {os.cpu_count()}")
     print(f"==================================================")
     
     try:
